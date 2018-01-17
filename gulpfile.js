@@ -38,8 +38,8 @@
     ));
 
     gulp.task('watch', ['build'], function () {
-        gulp.watch([`${gulp_config.src}${gulp_config.static}js/**/*.js`], ['build:js']);
-        gulp.watch([`${gulp_config.src}${gulp_config.static}css/**/*.css`], ['build:css']);
-        gulp.watch([`${gulp_config.src}${gulp_config.static}images/**/*.images`], ['build:images']);
-        gulp.watch([`${gulp_config.src}views/**/*.html`], ['build:html']);
+        gulp.watch([`${config.static}${config.js}`], ['build:js']);
+        gulp.watch([`${config.static}${config.css}`], ['build:css']);
+        gulp.watch([`${config.static}${config.image}`], ['build:images']);
+        gulp.watch([`${config.src}${config.html}`], ['build:html']);
     });
